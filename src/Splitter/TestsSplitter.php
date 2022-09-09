@@ -22,8 +22,9 @@ abstract class TestsSplitter extends BaseTask
     protected $testsFrom = 'tests';
 
     protected string $saveTo = 'tests/_data/paracept_';
-
-    protected string $excludePath = 'vendor';
+    
+    /** @var string[]|string */
+    protected  $excludePath = 'vendor';
 
     /** @var Filter[] $filter */
     protected array $filter = [];
@@ -74,6 +75,13 @@ abstract class TestsSplitter extends BaseTask
     public function groupsTo(string $pattern): TestsSplitter
     {
         $this->saveTo = $pattern;
+
+        return $this;
+    }
+
+    public function excludePathByArray(array $path): TestsSplitter
+    {
+        $this->excludePath = $path;
 
         return $this;
     }
