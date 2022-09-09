@@ -15,7 +15,7 @@
     },
     "require": {
         "php": "^7.4 | ^8.0",
-        "consolidation/robo": "dev-zt-patch-ParallelExec",
+        "consolidation/robo": "3.0.*",
         "symfony/finder": ">=2.7 <6.0",
         "ext-dom": "*",
         "ext-libxml": "*",
